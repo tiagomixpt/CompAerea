@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompAereaWeb", "CompAereaWe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompAerea.Infrastrutura", "CompAerea.Infrastrutura\CompAerea.Infrastrutura.csproj", "{E8EB3D06-8898-4DB4-96E6-C643F108C97C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompAerea.Dominio", "CompAerea.Dominio\CompAerea.Dominio.csproj", "{57CA9006-EA97-4637-A1E9-27A6A1818EB9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E8EB3D06-8898-4DB4-96E6-C643F108C97C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8EB3D06-8898-4DB4-96E6-C643F108C97C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8EB3D06-8898-4DB4-96E6-C643F108C97C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57CA9006-EA97-4637-A1E9-27A6A1818EB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57CA9006-EA97-4637-A1E9-27A6A1818EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57CA9006-EA97-4637-A1E9-27A6A1818EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57CA9006-EA97-4637-A1E9-27A6A1818EB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
