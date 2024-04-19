@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompAereaWeb", "CompAereaWeb\CompAereaWeb.csproj", "{1402F764-31C8-4284-9205-94B3A0D86E94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompAerea.Infrastrutura", "CompAerea.Infrastrutura\CompAerea.Infrastrutura.csproj", "{E8EB3D06-8898-4DB4-96E6-C643F108C97C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1402F764-31C8-4284-9205-94B3A0D86E94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1402F764-31C8-4284-9205-94B3A0D86E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1402F764-31C8-4284-9205-94B3A0D86E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1402F764-31C8-4284-9205-94B3A0D86E94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8EB3D06-8898-4DB4-96E6-C643F108C97C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8EB3D06-8898-4DB4-96E6-C643F108C97C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8EB3D06-8898-4DB4-96E6-C643F108C97C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8EB3D06-8898-4DB4-96E6-C643F108C97C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {71A94711-A68E-448C-873A-AED9D53C88E4}
+	EndGlobalSection
+EndGlobal
