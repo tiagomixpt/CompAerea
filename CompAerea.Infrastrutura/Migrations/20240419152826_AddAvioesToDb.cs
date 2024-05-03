@@ -23,8 +23,8 @@ namespace CompAerea.Infrastrutura.Migrations
                     Classe = table.Column<int>(type: "int", nullable: false),
                     Passageiros = table.Column<int>(type: "int", nullable: false),
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DataPartida = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DataChegada = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    DataPartida = table.Column<string>(type: "datetime2", nullable: true),
+                    DataChegada = table.Column<string>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
