@@ -54,7 +54,63 @@ namespace CompAerea.Infrastrutura.Data
                       DataChegada = "2013/02/12",
                   }
                         );
-        }
+			modelBuilder.Entity<Voos>().HasData(
+				new Voos
+				{
+					Numero_Voo = 111,
+					VooId = 1,
+
+				},
+				 new Voos
+				 {
+					 Numero_Voo = 102,
+					 VooId = 1,
+
+				 },
+				  new Voos
+				  {
+					  Numero_Voo = 103,
+					  VooId = 1,
+
+				  },
+				   new Voos
+				   {
+					   Numero_Voo = 104,
+					   VooId = 1,
+
+				   },
+					new Voos
+					{
+						Numero_Voo = 201,
+						VooId = 2,
+
+					},
+					new Voos
+					{
+						Numero_Voo = 202,
+						VooId = 2,
+
+					},
+					new Voos
+					{
+						Numero_Voo = 203,
+						VooId = 2,
+
+					},
+					new Voos
+					{
+						Numero_Voo = 301,
+						VooId = 3,
+
+					},
+					new Voos
+					{
+						Numero_Voo = 302,
+						VooId = 3,
+
+					}
+				);
+		}
 
     }
 }
