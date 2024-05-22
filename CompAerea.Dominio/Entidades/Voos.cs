@@ -1,11 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
-using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace CompAerea.Dominio.Entidades
 {
@@ -17,11 +12,11 @@ namespace CompAerea.Dominio.Entidades
 			[Display(Name = "Numero do Voo")]
 			public int Numero_Voo { get; set; }
 
-			[ForeignKey("Villa")]
+			[ForeignKey("Avioes")]
 
-			public int VooId { get; set; }
+			public int AvioesId { get; set; }
 			[ValidateNever]
-			public Avioes Voo { get; set; } = null!;
+			public Avioes Avioes { get; set; } = null!;
 			[Display(Name = "Detalhes adicionais")]
 			public string? Details { get; set; }
 		
