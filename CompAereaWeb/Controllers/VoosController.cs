@@ -29,6 +29,8 @@ namespace CompAereaWeb.Controllers
 			
 			if (ModelState.IsValid)
 			{
+				var Temp1 = obj;
+				var Temp2 = 
 				_db.Voos.Add(obj);
 				_db.SaveChanges();
 				TempData["success"] = "Voo criado com sucesso.";

@@ -102,15 +102,15 @@ namespace CompAerea.Infrastrutura.Migrations
                     b.Property<int>("Numero_Voo")
                         .HasColumnType("int");
 
+                    b.Property<int>("AvioesId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Details")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("VooId")
-                        .HasColumnType("int");
-
                     b.HasKey("Numero_Voo");
 
-                    b.HasIndex("VooId");
+                    b.HasIndex("AvioesId");
 
                     b.ToTable("Voos");
 
@@ -118,59 +118,59 @@ namespace CompAerea.Infrastrutura.Migrations
                         new
                         {
                             Numero_Voo = 111,
-                            VooId = 1
+                            AvioesId = 1
                         },
                         new
                         {
                             Numero_Voo = 102,
-                            VooId = 1
+                            AvioesId = 1
                         },
                         new
                         {
                             Numero_Voo = 103,
-                            VooId = 1
+                            AvioesId = 1
                         },
                         new
                         {
                             Numero_Voo = 104,
-                            VooId = 1
+                            AvioesId = 1
                         },
                         new
                         {
                             Numero_Voo = 201,
-                            VooId = 2
+                            AvioesId = 2
                         },
                         new
                         {
                             Numero_Voo = 202,
-                            VooId = 2
+                            AvioesId = 2
                         },
                         new
                         {
                             Numero_Voo = 203,
-                            VooId = 2
+                            AvioesId = 2
                         },
                         new
                         {
                             Numero_Voo = 301,
-                            VooId = 3
+                            AvioesId = 3
                         },
                         new
                         {
                             Numero_Voo = 302,
-                            VooId = 3
+                            AvioesId = 3
                         });
                 });
 
             modelBuilder.Entity("CompAerea.Dominio.Entidades.Voos", b =>
                 {
-                    b.HasOne("CompAerea.Dominio.Entidades.Avioes", "Voo")
+                    b.HasOne("CompAerea.Dominio.Entidades.Avioes", "Avioes")
                         .WithMany()
-                        .HasForeignKey("VooId")
+                        .HasForeignKey("AvioesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Voo");
+                    b.Navigation("Avioes");
                 });
 #pragma warning restore 612, 618
         }

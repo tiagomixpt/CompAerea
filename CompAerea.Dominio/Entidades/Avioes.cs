@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+
 namespace CompAerea.Dominio.Entidades
 {
     public class Avioes

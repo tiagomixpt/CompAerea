@@ -12,7 +12,7 @@ namespace CompAerea.Dominio.Entidades
 			[Display(Name = "Numero do Voo")]
 			public int Numero_Voo { get; set; }
 
-			[ForeignKey("Avioes")]
+			[ForeignKey("AvioesId")]
 
 			public int AvioesId { get; set; }
 			[ValidateNever]

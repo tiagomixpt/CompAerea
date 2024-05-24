@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-
-
 #nullable disable
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
@@ -19,15 +17,15 @@ namespace CompAerea.Infrastrutura.Migrations
                 columns: table => new
                 {
                     Numero_Voo = table.Column<int>(type: "int", nullable: false),
-                    VooId = table.Column<int>(type: "int", nullable: false),
+                    AvioesId = table.Column<int>(type: "int", nullable: false),
                     Details = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Voos", x => x.Numero_Voo);
                     table.ForeignKey(
-                        name: "FK_Voos_Avioes_VooId",
-                        column: x => x.VooId,
+                        name: "FK_Voos_Avioes_AvioesId",
+                        column: x => x.AvioesId,
                         principalTable: "Avioes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -35,24 +33,24 @@ namespace CompAerea.Infrastrutura.Migrations
 
             migrationBuilder.InsertData(
                 table: "Voos",
-                columns: new[] { "Numero_Voo", "Details", "VooId" },
+                columns: new[] { "Numero_Voo", "AvioesId", "Details" },
                 values: new object[,]
                 {
-                    { 102, null, 1 },
-                    { 103, null, 1 },
-                    { 104, null, 1 },
-                    { 111, null, 1 },
-                    { 201, null, 2 },
-                    { 202, null, 2 },
-                    { 203, null, 2 },
-                    { 301, null, 3 },
-                    { 302, null, 3 }
+                    { 102, 1, null },
+                    { 103, 1, null },
+                    { 104, 1, null },
+                    { 111, 1, null },
+                    { 201, 2, null },
+                    { 202, 2, null },
+                    { 203, 2, null },
+                    { 301, 3, null },
+                    { 302, 3, null }
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Voos_VooId",
+                name: "IX_Voos_AvioesId",
                 table: "Voos",
-                column: "VooId");
+                column: "AvioesId");
         }
 
         /// <inheritdoc />
