@@ -8,104 +8,101 @@ namespace CompAerea.Infrastrutura.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
-		public DbSet<Avioes> Avioes { get; set; }
-		public DbSet<Voos> Voos { get; set; }
+		public DbSet<FlightNumber> FlightNumber { get; set; }
+		public DbSet<Flight> Flights { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Avioes>().HasData(
-                  new Avioes
+            modelBuilder.Entity<Flight>().HasData(
+                  new Flight
                   {
                       Id = 1,
-                      Nome = "Airbus A300",
-                      Descricao = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                      Preco = 25000.00,
-                      Classe = 5,
-                      Passageiros = 200,
+                      Plane = "Airbus A300",
+                      Description = "Fast plane with lots of seats",
+                      Price = 25000.00,
+                      Seats = 200,
                       ImageUrl = "https://placehold.co/600x400",
-                      DataPartida = "2013/02/12",
-                      DataChegada = "2013/02/12",
+                      FlightFrom = "Portugal",
+                      FlightTo = "Italy",
                   },
-                  new Avioes
+                  new Flight
                   {
                       Id = 2,
-                      Nome = "ATR 72",
-                      Descricao = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                      Preco = 30000.00,
-                      Classe = 10,
-                      Passageiros = 125,
+                      Plane = "ATR 72",
+                      Description = "Comercial plane with Origin in France and Italy ",
+                      Price = 30000.00,
+					  Seats = 125,
                       ImageUrl = "https://placehold.co/600x400",
-                      DataPartida = "2013/02/12",
-                      DataChegada = "2013/02/12",
-                  },
-                  new Avioes
+					  FlightFrom = "France",
+					  FlightTo = "Italy",
+				  },
+                  new Flight
                   {
                       Id = 3,
-                      Nome = "Cessna 120",
-                      Descricao = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                      Preco = 15000.00,
-                      Classe = 2,
-                      Passageiros = 12,
+					  Plane = "ATR 42",
+					  Description = "A Turboprop Regional Airliner",
+					  Price = 15000.00,
+                      Seats = 80,
                       ImageUrl = "https://placehold.co/600x400",
-                      DataPartida = "2013/02/12",
-                      DataChegada = "2013/02/12",
-                  }
+					  FlightFrom = "France",
+					  FlightTo = "Switzerland",
+				  }
                         );
 
-			modelBuilder.Entity<Voos>().HasData(
-				new Voos
+			modelBuilder.Entity<FlightNumber>().HasData(
+				new FlightNumber
 				{
-					Numero_Voo = 111,
-					AvioesId = 1,
+					Flight_Number = 101,
+					FlightId = 1,
 
 				},
-				 new Voos
+				 new FlightNumber
 				 {
-					 Numero_Voo = 102,
-					 AvioesId = 1,
+					 Flight_Number = 102,
+					 FlightId = 1,
 
 				 },
-				  new Voos
+				  new FlightNumber
 				  {
-					  Numero_Voo = 103,
-					  AvioesId = 1,
+					  Flight_Number = 103,
+					  FlightId = 1,
 
 				  },
-				   new Voos
+				   new FlightNumber
 				   {
-					   Numero_Voo = 104,
-					   AvioesId = 1,
+					   Flight_Number = 104,
+					   FlightId = 1,
 
 				   },
-					new Voos
+					new FlightNumber
 					{
-						Numero_Voo = 201,
-						AvioesId = 2,
+						Flight_Number = 201,
+						FlightId = 2,
 
 					},
-					new Voos
+					new FlightNumber
 					{
-						Numero_Voo = 202,
-						AvioesId = 2,
+						Flight_Number = 202,
+						FlightId = 2,
 
 					},
-					new Voos
+					new FlightNumber
 					{
-						Numero_Voo = 203,
-						AvioesId = 2,
+						Flight_Number = 203,
+						FlightId = 2,
 
 					},
-					new Voos
+					new FlightNumber
 					{
-						Numero_Voo = 301,
-						AvioesId = 3,
+						Flight_Number = 301,
+						FlightId = 3,
 
 					},
-					new Voos
+					new FlightNumber
 					{
-						Numero_Voo = 302,
-						AvioesId = 3,
+						Flight_Number = 302,
+						FlightId = 3,
 
 					}
 				);

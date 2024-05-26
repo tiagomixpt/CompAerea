@@ -1,10 +1,10 @@
-﻿@model Avioes
+﻿@model Flight
 
 <div class="w-100 card border-0 p-4">
 	<div class="card-header bg-danger bg-gradient ml-0 py-3">
 		<div class="row">
 			<div class="col-12 text-center">
-				<h2 class="text-white py-2">Eliminar Avião</h2>
+				<h2 class="text-white py-2">Delete Flight</h2>
 			</div>
 		</div>
 	</div>
@@ -14,28 +14,23 @@
 			<div class="p-3">
 				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 				<div class="form-floating py-1 col-12">
-					<input asp-for="Nome" disabled class="form-control border-bottom shadow" />
-					<label asp-for="Nome" class="ms-2"></label>
+					<input asp-for="Plane" disabled class="form-control border-bottom shadow" />
+					<label asp-for="Plane" class="ms-2"></label>
 					
 				</div>
 				<div class="form-floating py-1 col-12">
-					<input asp-for="Descricao" disabled class="form-control border-bottom shadow" />
-					<label asp-for="Descricao" class="ms-2"></label>
+					<input asp-for="Description" disabled class="form-control border-bottom shadow" />
+					<label asp-for="Description" class="ms-2"></label>
 	
 				</div>
 				<div class="form-floating py-1 col-12">
-					<input asp-for="Preco" disabled class="form-control border-bottom shadow" />
-					<label asp-for="Preco" class="ms-2"></label>
+					<input asp-for="Price" disabled class="form-control border-bottom shadow" />
+					<label asp-for="Price" class="ms-2"></label>
 					
 				</div>
 				<div class="form-floating py-1 col-12">
-					<input asp-for="Classe" disabled class="form-control border-bottom shadow" />
-					<label asp-for="Classe" class="ms-2"></label>
-				
-				</div>
-				<div class="form-floating py-1 col-12">
-					<input asp-for="Passageiros" disabled class="form-control border-bottom shadow" />
-					<label asp-for="Passageiros" class="ms-2"></label>
+					<input asp-for="Seats" disabled class="form-control border-bottom shadow" />
+					<label asp-for="Seats" class="ms-2"></label>
 					
 				</div>
 				<div class="form-floating py-1 col-12">
@@ -44,25 +39,25 @@
 				
 				</div>
 				<div class="form-floating py-1 col-12">
-					<input asp-for="DataPartida" disabled class="form-control border-bottom shadow" />
-					<label asp-for="DataPartida" class="ms-2"></label>
+					<input asp-for="FlightFrom" disabled class="form-control border-bottom shadow" />
+					<label asp-for="FlightFrom" class="ms-2"></label>
 					
 				</div>
 				<div class="form-floating py-1 col-12">
-					<input asp-for="DataChegada" disabled class="form-control border-bottom shadow" />
-					<label asp-for="DataChegada" class="ms-2"></label>
+					<input asp-for="FlightTo" disabled class="form-control border-bottom shadow" />
+					<label asp-for="FlightTo" class="ms-2"></label>
 				
 				</div>
 
 				<div class="row pt-2">
 					<div class="col-6 col-md-3">
 						<button type="submit" class="btn btn-danger w-100">
-							<i class="bi bi-check-circle"></i> Eliminar
+							<i class="bi bi-check-circle"></i> Delete
 						</button>
 					</div>
 					<div class="col-6 col-md-3">
 						<a asp-action="Index" class="btn btn-secondary w-100">
-							<i class="bi bi-x-circle"></i> Cancelar
+							<i class="bi bi-x-circle"></i> Cancel
 						</a>
 					</div>
 				</div>

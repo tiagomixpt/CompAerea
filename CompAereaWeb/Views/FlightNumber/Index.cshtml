@@ -1,18 +1,18 @@
-﻿@model IEnumerable<Voos>
+﻿@model IEnumerable<FlightNumber>
 
 <div class="w-100 card border-0 p-4">
 	<div class="card-header bg-success bg-gradient ml-0 py-3">
 		<div class="row">
 			<div class="col-12 text-center">
-				<h2 class="text-white py-2">Lista de Voos</h2>
+				<h2 class="text-white py-2">Flight Number List</h2>
 			</div>
 		</div>
 	</div>
 	<div class="card-body border p-4">
 		<div class="row pb-3">
 			<div class="col-6 offset-6 text-end">
-				<a asp-controller="Voos" asp-action="Create" class="btn btn-secondary">
-					<i class="bi bi-plus-circle"></i>Criar Novo Voo
+				<a asp-controller="FlightNumber" asp-action="Create" class="btn btn-secondary">
+					<i class="bi bi-plus-circle"></i>Create Flight Number
 				</a>
 			</div>
 		</div>
@@ -20,10 +20,9 @@
 		<table class="table table-bordered table-striped">
 			<thead>
 				<tr>
-					<th>Id do Voo</th>
+					<th>Plane Name</th>
 					<th>Numero do Voo</th>
-					<th>Aviao</th>
-					<th>Detalhes</th>
+					<th>Details</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -31,17 +30,16 @@
 				@foreach (var obj in Model)
 				{
 					<tr>
-						<td>@obj.AvioesId</td>
-						<td>@obj.Numero_Voo</td>
-						<td>@obj.Avioes</td>
+						<td>@obj.Flight.Plane</td> 
+						<td>@obj.Flight_Number</td>
 						<td>@obj.Details</td>
 						<td>
 							<div class="w-75 btn-group" role="group">
-								<a asp-action="Update" asp-route-avioesId="@obj.Numero_Voo" class="btn btn-success mx-2">
-									<i class="bi bi-pencil-square"></i> Editar
+								<a asp-action="Update" asp-route-flightNumberId="@obj.Flight_Number" class="btn btn-success mx-2">
+									<i class="bi bi-pencil-square"></i> Edit
 								</a>
-								<a asp-action="Delete" asp-route-avioesId="@obj.Numero_Voo" class="btn btn-danger mx-2">
-									<i class="bi bi-trash-fill"></i> Eliminar
+								<a asp-action="Delete" asp-route-flightNumberId="@obj.Flight_Number" class="btn btn-danger mx-2">
+									<i class="bi bi-trash-fill"></i> Delete
 								</a>
 							</div>
 						</td>

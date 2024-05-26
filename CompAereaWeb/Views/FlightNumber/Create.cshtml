@@ -1,10 +1,10 @@
-﻿@model Voos
+﻿@model FlightNumber
 
 <div class="w-100 card border-0 p-4">
 	<div class="card-header bg-success bg-gradient ml-0 py-3">
 		<div class="row">
 			<div class="col-12 text-center">
-				<h2 class="text-white py-2">Criar Avião</h2>
+				<h2 class="text-white py-2">Create Flight Number</h2>
 			</div>
 		</div>
 	</div>
@@ -13,15 +13,15 @@
 			<div class="p-3">
 				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 				<div class="form-floating py-1 col-12">
-					<input asp-for="Numero_Voo" class="form-control border-bottom shadow" />
-					<label asp-for="Numero_Voo" class="ms-2"></label>
-					<span asp-validation-for="Numero_Voo" class="text-danger"></span>
-				</div>
-				<div class="form-floating py-1 col-12">
-					<input asp-for="Avioes" class="form-control border-bottom shadow" />
-					<label asp-for="Avioes" class="ms-2"></label>
-					<span asp-validation-for="Avioes" class="text-danger"></span>
-				</div>
+					<input asp-for="FlightId" class="form-control border-bottom shadow" />
+					<label asp-for="FlightId" class="ms-2"></label>
+					<span asp-validation-for="FlightId" class="text-danger"></span>
+			</div> 
+ 				<div class="form-floating py-1 col-12">
+					<input asp-for="Flight_Number" class="form-control border-bottom shadow" />
+					<label asp-for="Flight_Number" class="ms-2"></label>
+					<span asp-validation-for="Flight_Number" class="text-danger"></span>
+				</div> 
 				<div class="form-floating py-1 col-12">
 					<input asp-for="Details" class="form-control border-bottom shadow" />
 					<label asp-for="Details" class="ms-2"></label>

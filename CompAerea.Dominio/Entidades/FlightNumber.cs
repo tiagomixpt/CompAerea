@@ -4,20 +4,20 @@ using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace CompAerea.Dominio.Entidades
 {
-	public class Voos
+	public class FlightNumber
 	{
 
 		
 			[Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
-			[Display(Name = "Numero do Voo")]
-			public int Numero_Voo { get; set; }
+			[Display(Name = "Flight Number")]
+			public int Flight_Number { get; set; }
 
-			[ForeignKey("AvioesId")]
+			[ForeignKey("Flight")]
+			public int FlightId { get; set; }
 
-			public int AvioesId { get; set; }
 			[ValidateNever]
-			public Avioes Avioes { get; set; } = null!;
-			[Display(Name = "Detalhes adicionais")]
+			public Flight Flight { get; set; } = null!;
+			[Display(Name = "Extra Details")]
 			public string? Details { get; set; }
 		
 	}
